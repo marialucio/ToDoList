@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Gochi+Hand&display=swap');
+
+
+.titulo{
+    font-family: 'Gochi Hand', cursive;
+    color: #b11623;
+}
+
+.text-center{
+    font-family: 'Delicious Handrawn', cursive;;
+    font-size: 20px;
+}
+
+.btn{
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+.table{
+    margin-top: 5%;
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 20px;
+}

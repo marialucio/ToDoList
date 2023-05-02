@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ToDoList.Models.Lista>
+
+
+@{
+    ViewData["Title"] = "To do List";
+    <link rel="stylesheet" href="~/css/Index.css" />
+}
+
+<body>
+    <div class="text-center">
+        <h1 class="titulo">To Do List</h1>
+        <p>Crie listas de tarefas para melhorar sua organização!</p>
+    </div>
+
+    @if(Model.Count() == 0)
+    {
+        <center><a href="/Lista/CreateList" class="btn btn-outline-dark">Criar Lista</a></center>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>TABELA</th>
+                    <th>DESCRIÇÃO</th>
+                    <th colspan="4"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var lista in Model){
+                    <tr>
+                        <td>@lista.Title</td>
+                        <td>@lista.Description</td>
+                        <td></td>
+                        <td>
+                            <a href="/Lista/Show/@lista.Id" class="btn btn-outline-dark">Detalhes</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tr>
+                <td colspan="4"><center><a href="/Lista/CreateList" class="btn btn-outline-dark">Cadastrar</a></center></td>
+            </tr>
+        </table>
+    }
+</body>

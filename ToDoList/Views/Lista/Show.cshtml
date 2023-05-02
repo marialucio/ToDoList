@@ -1,0 +1,17 @@
+@model ToDoList.Models.Lista
+
+@{
+    ViewData["Title"] = $"Lista {Model.Title}";
+    <link rel="stylesheet" href="~/css/Show.css" />
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="background">
+    <p><br><b>Título:</b> @Model.Title</p>
+    <p><b>Descrição:</b> @Model.Description</p>
+
+    <a href="/Lista/Index" class="btn btn-outline-dark">Voltar</a>
+    <a href="/Lista/Delete/@Model.Id" class="btn btn-outline-dark">Deletar</a>
+    <a href="/Lista/Update/@Model.Id" class="btn btn-outline-dark">Atualizar</a><br><br>
+</div>

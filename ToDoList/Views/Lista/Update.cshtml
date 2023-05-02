@@ -1,0 +1,24 @@
+@model ToDoList.Models.Lista
+
+@{
+    ViewData["Title"] = $"Atualizar {Model.Title}";
+    <link rel="stylesheet" href="~/css/CreateList.css" />
+}
+
+<h1>@ViewData["Title"]</h1><br>
+
+<div class="background">
+    <form action="/Lista/Save/@Model.Id" method="post">
+        <center>
+            <label for="title">Título:</label><br>
+            <input type="text" name="title" id="title" required><br>
+        
+            <label for="description">Descrição:</label><br>
+            <input type="text" name="description" id="description" required><br>
+
+            <br><input type="submit" class="btn btn-primary btn-sm btn-success" value="Atualizar"><br><br>
+        </center>
+    </form>
+
+    <a href="/Lista/Index" class="btn btn-outline-dark">Voltar</a><br><br>
+</div>
