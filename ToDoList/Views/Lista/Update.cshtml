@@ -1,24 +1,40 @@
 @model ToDoList.Models.Lista
 
 @{
-    ViewData["Title"] = $"Atualizar {Model.Title}";
+
     <link rel="stylesheet" href="~/css/CreateList.css" />
 }
 
-<h1>@ViewData["Title"]</h1><br>
 
-<div class="background">
-    <form action="/Lista/Save/@Model.Id" method="post">
-        <center>
-            <label for="title">Título:</label><br>
-            <input type="text" name="title" id="title" required><br>
-        
-            <label for="description">Descrição:</label><br>
-            <input type="text" name="description" id="description" required><br>
 
-            <br><input type="submit" class="btn btn-primary btn-sm btn-success" value="Atualizar"><br><br>
-        </center>
-    </form>
+<div>
+    <div id="titleg">
+        <img src="~/css/img/title.png" alt="...">
+    </div>
+    <div class="container">
+        <div class="papel">
+            <p>Edite a lista de tarefas @Model.Title</p>
 
-    <a href="/Lista/Index" class="btn btn-outline-dark">Voltar</a><br><br>
+            <div class="form">
+                <form action="/Lista/Save/@Model.Id" method="post">
+                <label for="title">Título:</label><br>
+                <input type="text" name="title" placeholder="@Model.Title" id="title" required><br><br>
+            
+                <label for="description">Descrição:</label><br>
+                <textarea name="description" placeholder="@Model.Description" cols="23" rows="4" id="description" required></textarea><br>
+
+                <input type="submit" value="Atualizar" id="btn"><br><br>
+            </form>
+            </div>
+
+            @if(TempData["MessageError"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show mt-4" role="alert">
+                    @TempData["MessageError"]<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            <a href="/Lista/Show/@Model.Id"><img src="~/css/img/botaovoltar.png" alt="..."></a>
+        </div>
+    </div>
 </div>

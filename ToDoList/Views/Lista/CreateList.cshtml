@@ -4,20 +4,33 @@
 }   
 
 
-<h1>@ViewData["Title"]</h1>
+<div>
+    <div id="titleg">
+        <img src="~/css/img/title.png" alt="...">
+    </div>
+    <div class="container">
+        <div class="papel">
+            <p>Crie sua lista de tarefas!</p>
+            <div class="form">
+                <form action="/Lista/Add" method="post">
+                    
+                    <label for="title">Título:</label><br>
+                    <input type="text" name="title" id="title" required><br><br>
 
-<div class="background">
-    <form action="/Lista/Add" method="post">
-    <center>
-            <label for="title">Título:</label><br>
-            <input type="text" name="title" id="title" required><br><br>
+                    <label for="description">Descrição:</label><br>
+                    <textarea name="description" cols="23" rows="4" id="description" required></textarea><br>
 
-            <label for="description">Descrição:</label><br>
-            <input type="text" name="description" id="description" required><br><br>
-        <input type="submit" class="btn btn-primary btn-sm btn-success" value="Criar"><br><br>
-    </center>
-    </form>
+                    <input type="submit" value="Criar" id="btn">
+                </form>
+            </div>
 
-    <a href="/Lista/Index" class="btn btn-outline-dark">Voltar</a>
-
+            @if(TempData["MessageError"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show mt-4" role="alert">
+                    @TempData["MessageError"]<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            <a href="/Lista/Index"><img src="~/css/img/botaovoltar.png" alt="..."></a>
+        </div>
+    </div>
 </div>

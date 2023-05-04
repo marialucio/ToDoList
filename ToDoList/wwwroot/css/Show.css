@@ -1,22 +1,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Gochi+Hand&display=swap');
 
-h1{
-    text-align: center;
-    font-family: 'Gochi Hand', cursive;
-    color: #b11623;
+body{
+    background-color: #84B295;
+    background-image: url("./img/fundo.png");
 }
 
-.background{
-    margin-left: 38%;
-    margin-top: 10%;
-    border-radius: 13%;
-    width: 25%;
-    background-color: antiquewhite;
+::-webkit-scrollbar {
+    display: none;
+}
+
+#titleg img{
+    height: 80px;
+    border: 2px solid #594747;
+    border-radius: 10px;
+}
+
+div #titleg{
+    margin-top: 40px;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    margin-left: 40%;
+}
+
+.container{
+    margin-top: 75px;
+    height: auto;
+    background: #EB7072;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #FF5252;
+    position: relative;
     text-align: center;
-    font-family: 'Delicious Handrawn', cursive;
-    font-size: 20px;
+    z-index: 1;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.papel{
+    width: 90vw;
+    min-height: 78vh;
+    max-height: auto;
+    background: #FEFFD6;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #B3A176;
+    position: relative;
+    z-index: 1;
+    padding-top: 45px;
+}
+
+.papel img{
+    padding-top: 45px;
+    display: flex;
+    width: 80px;
+}
+
+
+.box{
+    width: 380px;
+    min-height: 380px;
+    max-height: auto;
+    background: #ECCF8D;
+    border: 2px solid #B3A176;
+    border-radius: 10px;
+    flex-direction: row;
+    display: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    margin-left: 35%;
+    font-size: 15px;
+
+}
+
+.text{
+    background-color: #E3E1B1;
+    border: 2px solid #B3A176;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Gochi Hand', cursive;
+    color: #322f3e;
+    width: 200px;
+    min-height: 40px;
+    max-width: auto;
+    display: block;
+    text-align: center;
+    margin-left: 23%;
+    padding: 5px;
+    overflow-wrap:break-word
+
+}
+
+#description{
+    min-height: 100px;
+    max-height: auto;
+    
 }
 
 .btn{
-    font-family: 'Delicious Handrawn', cursive;
+    margin-top: 50px;
+    width: 130px;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 20px;
+}
+
+#delete{
+    color: #E85A50;
+    background-color: #E08E79;
+    border: 2px solid #E85A50;
+    border-radius: 10px;
+}
+
+#att{
+    color: #207178;
+    background-color: #98C3A1;
+    border: 2px solid #25857D;
+    border-radius: 10px;
+}
+
+p{
+    font-family: 'Gochi Hand', cursive;
+    font-size: 20px;
+    margin: 0%;
+}
+
+#description p{
+    font-size: 15px;
+}
+
+.text p{
+    font-size: 15px;
+}
+
+h1{
+    font-family: 'Gochi Hand', cursive;
+    font-size: 30px;
+    margin: 0%;
 }

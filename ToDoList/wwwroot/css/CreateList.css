@@ -1,35 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
-h1{
-    text-align: center;
+body{
+    background-color: #84B295;
+    background-image: url("./img/fundo.png");
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#titleg img{
+    height: 80px;
+    border: 2px solid #594747;
+    border-radius: 10px;
+}
+
+div #titleg{
+    margin-top: 40px;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    margin-left: 40%;
+}
+
+
+.alert{
+    margin-bottom: 10px;
+    background-color: #E08E79;
+    border: 2px solid #E85A50;
+    border-radius: 10px;
     font-family: 'Gochi Hand', cursive;
-    color: #b11623;
+    font-size: 15px;
+    width: 380px;
+    display: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+
 }
 
-.background{
-    margin-left: 38%;
-    margin-top: 5%;
-    border-radius: 10%;
-    width: 25%;
-    background-color: antiquewhite;
+.container{
+    margin-top: 75px;
+    height: auto;
+    background: #EB7072;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #FF5252;
+    position: relative;
     text-align: center;
+    z-index: 1;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
-form{
-    font-family: 'Delicious Handrawn', cursive;
-    font-size: 20px;
-    margin: 5% 5% 5% 5%;
+.papel{
+    width: 90vw;
+    min-height: 78vh;
+    max-height: auto;
+    background: #FEFFD6;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #B3A176;
+    position: relative;
+    z-index: 1;
+    padding-top: 50px;
+}
+
+
+.form{
+    width: 380px;
+    height: 380px;
+    background: #ECCF8D;
+    border: 2px solid #B3A176;
+    border-radius: 10px;
+    flex-direction: row;
+    display: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    padding-top: 3%;
 }
 
 label{
-    margin-top: 5%;
-}
-
-a{
-    margin-bottom: 5%;
-}
-
-.btn{
-    font-family: 'Delicious Handrawn', cursive;
+    font-family: 'Gochi Hand', cursive;
     font-size: 20px;
+}
+
+input, textarea{
+    background-color: #E3E1B1;
+    border: 2px solid #B3A176;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Gochi Hand', cursive;
+    color: #322f3e;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#title{
+    min-height: 40px;
+}
+
+#description{
+    min-height: 100px;
+    max-height: auto;
+}
+
+#btn{
+    margin-top: 45px;
+    width: 100px;
+    color: #207178;
+    background-color: #98C3A1;
+    border: 2px solid #25857D;
+    border-radius: 10px;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 20px;
+}
+
+.papel img{
+    padding-top: 20px;
+    display: flex;
+    width: 80px;
+}
+
+p{
+    font-family: 'Gochi Hand', cursive;
+    font-size: 30px;
 }

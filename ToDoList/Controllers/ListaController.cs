@@ -30,7 +30,18 @@ public class ListaController : Controller
 
     public IActionResult Add([FromForm] string title, [FromForm] string description)
     {
-        
+        if(title.Length > 50)
+        {
+            TempData["MessageError"] = "O título deve ter, no máximo, 50 caracteres. Tente novamente :)";
+            return RedirectToAction("CreateList");
+        }
+
+        if(description.Length > 50 )
+        {
+            TempData["MessageError"] = "A descrição deve ter, no máximo, 50 caracteres. Tente novamente :)";
+            return RedirectToAction("CreateList");
+        }
+
         _context.Listas.Add(new Lista(title, description));
         _context.SaveChanges();
 
@@ -51,12 +62,25 @@ public class ListaController : Controller
 
     public IActionResult Save(int id, [FromForm] string title, [FromForm] string description)
     {
+
+        if(title.Length > 50 )
+        {
+            TempData["MessageError"] = "O título deve ter, no máximo, 50 caracteres. Tente novamente :)";
+            return RedirectToAction("Update", new {id = id});
+        }
+
+        if(description.Length > 50 )
+        {
+            TempData["MessageError"] = "A descrição deve ter, no máximo, 50 caracteres. Tente novamente :)";
+            return RedirectToAction("Update", new {id = id});
+        }
+        
         _context.Listas.Find(id).Title = title;
         _context.Listas.Find(id).Description = description;
 
         _context.Listas.Update(_context.Listas.Find(id));
         _context.SaveChanges();
 
-        return RedirectToAction("Index");
+        return RedirectToAction("Show", new {id = id});
     }
 }
