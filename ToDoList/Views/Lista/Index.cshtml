@@ -13,37 +13,25 @@
 
     <div class="container">
         <div class="papel">
-            <p>Crie sua lista de tarefas e facilite sua organização!</p><br><br>
             @if(Model.Count() == 0)
             {
+                <p>Crie sua lista de tarefas e facilite sua organização!</p><br><br>
                 <br><br><br><a href="/Lista/CreateList"><img src="~/css/img/botaocriar.png" alt="..."></a>
             }
             else
             {
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>TABELA</th>
-                            <th>DESCRIÇÃO</th>
-                            <th colspan="4"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach(var lista in Model){
-                            <tr>
-                                <td>@lista.Title</td>
-                                <td>@lista.Description</td>
-                                <td></td>
-                                <td>
-                                    <a href="/Lista/Show/@lista.Id" class="btn btn-outline-dark">Detalhes</a>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                    <tr>
-                        <td colspan="4"><center><a href="/Lista/CreateList" class="btn btn-outline-dark">Cadastrar</a></center></td>
-                    </tr>
-                </table>
+                <a href="/Lista/CreateList"><img src="~/css/img/botaocriar.png" alt="..."></a><br>
+
+                @foreach(var lista in Model){
+                    <div class="box">
+                        <div>
+                            <h5>@lista.Title<a href="/Lista/Show/@lista.Id"><img src="~/css/img/ver-detalhes.png"></a></h5>
+                            <div class="text">
+                                <p>@lista.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                }        
             }   
         </div>
     </div>
