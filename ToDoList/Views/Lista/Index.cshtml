@@ -1,9 +1,12 @@
 @model IEnumerable<ToDoList.Models.Lista>
 
-
 @{
     ViewData["Title"] = "To do List";
     <link rel="stylesheet" href="~/css/Index.css" />
+}
+
+@section Scripts{
+    <script src="~/js/index.js"></script>
 }
 
 <div>
@@ -24,12 +27,20 @@
 
                 @foreach(var lista in Model){
                     <div class="box">
-                        <div>
+                        <div class="info">
                             <h5>@lista.Title<a href="/Lista/Show/@lista.Id"><img src="~/css/img/ver-detalhes.png"></a></h5>
                             <div class="text">
                                 <p>@lista.Description</p>
                             </div>
                         </div>
+
+                        
+                        <ul id=@lista.Id data-parent-id=@lista.Id>
+                            <form>
+                                <input type="text" placeholder="Nova tarefa">
+                                <button type="button" onclick="addTask(event)">+</button>
+                            </form>
+                        </ul>
                     </div>
                 }        
             }   

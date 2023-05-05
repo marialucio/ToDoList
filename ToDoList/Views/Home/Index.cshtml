@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="~/css/Index.css" />
 }
 
+@section Scripts{
+    <script src="~/js/index.js"></script>
+}
 <div>
     <div id="title">
         <img src="~/css/img/title.png" alt="...">
@@ -30,6 +33,14 @@
                                 <p>@lista.Description</p>
                             </div>
                         </div>
+
+                        
+                        <ul id=@lista.Id data-parent-id=@lista.Id>
+                            <form>
+                                <input type="text" placeholder="Nova tarefa">
+                                <button type="button" onclick="addTask(event)">+</button>
+                            </form>
+                        </ul>
                     </div>
                 }        
             }   

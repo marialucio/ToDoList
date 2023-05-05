@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "netX0huJkyMel/a86adpwwFt2Ule0xCHeliMPG9g+W8=",
+  "Hash": "SE7aZvwKwjblINzuXYZS88yB+M/pmKc9os+ny+k4ugA=",
   "Source": "ToDoList",
   "BasePath": "_content/ToDoList",
   "Mode": "Default",
@@ -102,6 +102,23 @@
       "OriginalItemSpec": "wwwroot\\css\\img\\title.PNG"
     },
     {
+      "Identity": "C:\\Users\\Maria\\Documents\\V360\\ToDoList\\wwwroot\\css\\img\\ver-detalhes.png",
+      "SourceId": "ToDoList",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Maria\\Documents\\V360\\ToDoList\\wwwroot\\",
+      "BasePath": "_content/ToDoList",
+      "RelativePath": "css/img/ver-detalhes.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\img\\ver-detalhes.png"
+    },
+    {
       "Identity": "C:\\Users\\Maria\\Documents\\V360\\ToDoList\\wwwroot\\css\\Index.css",
       "SourceId": "ToDoList",
       "SourceType": "Discovered",
@@ -168,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Maria\\Documents\\V360\\ToDoList\\wwwroot\\js\\index.js",
+      "SourceId": "ToDoList",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Maria\\Documents\\V360\\ToDoList\\wwwroot\\",
+      "BasePath": "_content/ToDoList",
+      "RelativePath": "js/index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\index.js"
     },
     {
       "Identity": "C:\\Users\\Maria\\Documents\\V360\\ToDoList\\wwwroot\\js\\site.js",
